@@ -5,7 +5,18 @@
 <title>Fonseca Camargo Arquitetos | Site em construção</title>
 <meta name="description" content="Fonseca Camargo Arquitetos. Nosso novo site está em construção.">
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#343434;font-family:Arial,sans-serif;min-height:100svh;display:flex;flex-direction:column}header{padding:30px 7%;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#777;border-bottom:1px solid #eee}main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:65px 24px 80px;text-align:center}.logo{position:relative;width:min(100%,680px);aspect-ratio:640/180;overflow:hidden;margin:0 0 48px}.logo img{position:absolute;width:100%;height:auto;left:0;top:50%;transform:translateY(-50%)}.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#888;margin:0 0 20px}h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 22px}p{color:#777;font-size:15px;line-height:1.9;margin:0;max-width:420px}.line{width:48px;height:1px;background:#aaa;margin:30px 0 0}footer{padding:25px 7%;border-top:1px solid #eee;color:#888;font-size:10px;letter-spacing:.14em;text-align:center;line-height:1.8}@media(max-width:600px){header{text-align:center;padding:24px}.logo{margin-bottom:36px}main{padding:45px 20px 65px}.label{font-size:9px}}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#343434;font-family:Arial,sans-serif;min-height:100svh;display:flex;flex-direction:column}header{padding:30px 7%;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#777;border-bottom:1px solid #eee}main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:65px 24px 80px;text-align:center}.logo{position:relative;width:min(100%,680px);aspect-ratio:640/180;overflow:hidden;margin:0 0 48px}.logo img{position:absolute;width:100%;height:auto;left:0;top:50%;transform:translateY(-50%)}.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#888;margin:0 0 20px}h1{font-family:Arial,Helvetica,sans-serif;font-weight:300;letter-spacing:-.045em;font-size:clamp(30px,5vw,46px);line-height:1.2;margin:0 0 22px}p{color:#777;font-size:15px;line-height:1.9;margin:0;max-width:420px}.line{width:48px;height:1px;background:#aaa;margin:30px 0 0}footer{padding:25px 7%;border-top:1px solid #eee;color:#888;font-size:10px;letter-spacing:.14em;text-align:center;line-height:1.8}@media(max-width:600px){header{text-align:center;padding:24px}.logo{margin-bottom:36px}main{padding:45px 20px 65px}.label{font-size:9px}}
+
+.construction{width:min(100%,380px);margin:30px 0 0;color:#73766f}
+.construction svg{display:block;width:100%;height:auto;overflow:visible}
+.progress{height:3px;background:#eceee9;position:relative;overflow:hidden;margin-top:8px;border-radius:4px}
+.progress:before{content:"";position:absolute;inset:0 auto 0 0;width:62%;background:#818775;border-radius:4px}
+.progress:after{content:"";position:absolute;top:0;bottom:0;width:35%;background:linear-gradient(90deg,transparent,#c4cbb6,transparent);animation:progress 3s ease-in-out infinite}
+.progress-caption{display:flex;justify-content:space-between;gap:16px;margin-top:12px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#8a8d84}
+.load{animation:hoist 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes progress{from{left:-35%}to{left:100%}}
+@keyframes hoist{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.progress:after,.load{animation:none}}
 </style>
 </head>
 <body>
@@ -15,7 +26,25 @@
 <div class="label">Um novo espaço está tomando forma</div>
 <h1>Site em construção</h1>
 <p>Estamos preparando nosso novo espaço digital.<br>Em breve, arquitetura e interiores por aqui.</p>
-<div class="line" aria-hidden="true"></div>
+
+<div class="construction">
+<svg viewBox="0 0 380 145" role="img" aria-labelledby="obra-title" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+<title id="obra-title">Edifício em construção com guindaste e estrutura arquitetônica</title>
+<path d="M8 137H372" stroke="#c5c8bf"/>
+<path d="M36 136V46H183V136M36 76H183M36 106H183M73 46V136M110 46V136M147 46V136"/>
+<path d="M30 46H190M30 76H190M30 106H190" stroke="#a9aea0"/>
+<path d="M43 83H65V99H43ZM81 113H102V136H81ZM118 83H140V99H118Z" fill="#f1f2ee" stroke="#b8bdae"/>
+<path d="M198 136V94H253V136M198 115H253M226 94V136" stroke="#b1b6a7" stroke-dasharray="4 4"/>
+<path d="M288 136V19H303V136M288 136L303 113L288 90L303 67L288 44L303 19M288 19L303 44L288 67L303 90L288 113L303 136"/>
+<path d="M158 19H354V29H158ZM158 19L180 29L202 19L224 29L246 19L268 29L290 19L312 29L334 19L354 29M295 3V19M295 3L238 19M295 3L344 19"/>
+<path d="M335 29V44M327 44H343V54H327Z" fill="#e6e9df"/>
+<path d="M172 29V56" stroke="#a3a999"/>
+<g class="load"><path d="M172 56V62M168 62Q168 69 173 69Q178 69 178 64M173 69L159 82M173 69L187 82M155 82H191V91H155Z" fill="#f1f2ee"/></g>
+<path d="M14 136L22 120L30 136M17 130H27M262 136L270 120L278 136M265 130H275" stroke="#a2a994"/>
+</svg>
+<div class="progress" role="img" aria-label="Construção do site em andamento"></div>
+<div class="progress-caption"><span>Projeto em execução</span><span>Em breve</span></div>
+</div>
 </main>
 <footer>FONSECA CAMARGO ARQUITETOS</footer>
 </body></html>
