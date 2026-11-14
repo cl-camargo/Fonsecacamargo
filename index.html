@@ -21,6 +21,50 @@
 html{height:100%}body{height:100svh;min-height:0}header{padding:clamp(14px,3vh,26px) 7%;flex-shrink:0}main{min-height:0;padding:20px 6%;gap:clamp(15px,4vh,36px)}.logo{width:min(55vw,560px);aspect-ratio:640/140;margin:0;flex-shrink:0}.hero{width:min(100%,1000px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(30px,6vw,90px)}.copy{text-align:left}.label{line-height:1.7;margin-bottom:18px}h1{font-size:clamp(28px,3vw,44px);margin-bottom:18px;white-space:nowrap}p{font-size:14px;line-height:1.85}.construction{width:100%;margin:0}footer{padding:16px 7%;flex-shrink:0}
 @media(max-width:650px){main{padding:16px 6%;gap:5vh}.logo{width:min(90%,480px)}.hero{grid-template-columns:1fr;gap:26px;max-width:380px}.copy{text-align:center}h1{font-size:30px;white-space:normal}.label{font-size:9px;margin-bottom:12px}p{font-size:13px}.construction{width:85%;margin:0 auto}.progress-caption{font-size:8px;margin-top:9px}footer{font-size:9px;padding:13px}}
 @media(max-height:560px){header{padding:12px 7%;font-size:9px}main{gap:10px;padding:10px 6%}.logo{width:min(35vw,350px)}.hero{grid-template-columns:1fr 1fr;max-width:900px;gap:30px}.copy{text-align:left}h1{font-size:clamp(22px,3vw,32px);margin-bottom:10px}.label{font-size:8px;margin-bottom:8px}p{font-size:12px;line-height:1.5}.construction{width:100%}.construction svg{max-height:130px}footer{padding:10px;font-size:8px}}
+
+/* Fluid layout for phones, tablets and compact landscape screens. */
+.hero,.copy,.construction{min-width:0}
+p{margin-inline:auto}
+body{height:auto;min-height:100svh}
+main{flex:1 0 auto}
+@media(min-width:651px){.copy p{margin-inline:0}}
+@media(max-width:900px) and (min-width:651px){
+.hero{gap:32px}h1{font-size:clamp(25px,3.8vw,34px);white-space:normal}
+}
+@media(max-width:650px){
+body{min-height:100svh;min-height:100dvh}
+header{padding:16px 20px;font-size:9px;letter-spacing:.2em}
+main{flex:1;justify-content:center;padding:clamp(16px,3svh,28px) 22px;gap:clamp(18px,4svh,34px)}
+.logo{width:min(100%,440px);aspect-ratio:640/140}
+.hero{display:grid;grid-template-columns:1fr;max-width:400px;gap:clamp(22px,4svh,34px)}
+.copy{text-align:center}
+.label{font-size:clamp(8px,2.2vw,10px);letter-spacing:.17em;line-height:1.6;margin-bottom:12px}
+h1{font-size:clamp(27px,7.5vw,38px);line-height:1.15;white-space:normal;margin-bottom:16px}
+p{font-size:clamp(12px,3.35vw,14px);line-height:1.75}
+.construction{width:min(90%,330px);margin-inline:auto}
+.construction svg{max-height:none}
+.progress-caption{font-size:8px;letter-spacing:.12em;margin-top:10px}
+footer{font-size:8px;letter-spacing:.12em;padding:14px 18px max(14px,env(safe-area-inset-bottom));line-height:1.5}
+}
+@media(max-width:650px) and (max-height:620px) and (orientation:portrait){
+header{padding:11px 16px}main{gap:14px;padding:12px 20px}
+.logo{width:min(88%,330px)}.hero{gap:16px}
+h1{font-size:27px;margin-bottom:10px}.label{margin-bottom:8px}
+p{font-size:12px;line-height:1.6}.construction{width:min(78%,245px)}
+footer{padding:10px 16px}
+}
+@media(max-height:560px) and (orientation:landscape){
+header{padding:10px 20px;font-size:9px}
+main{padding:10px 5%;gap:8px}
+.logo{width:min(32vw,300px)}
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);max-width:900px;gap:24px}
+.copy{text-align:left}.copy p{margin-inline:0}
+h1{font-size:clamp(23px,3.6vw,32px);margin-bottom:10px}
+.label{font-size:8px;margin-bottom:8px}p{font-size:12px;line-height:1.5}
+.construction{width:min(100%,330px);margin-inline:auto}
+.construction svg{max-height:115px}
+footer{padding:9px 16px;font-size:8px}
+}
 </style>
 </head>
 <body>
